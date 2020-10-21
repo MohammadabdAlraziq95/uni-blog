@@ -1,0 +1,229 @@
+.container-postdetil {
+  float: none;
+  margin: 0 auto;
+}
+
+.post-exist + .container-postdetil {
+  float: left;
+}
+img.img-responsive {
+  width: 300px;
+  margin: 20px;
+}
+.title {
+  line-height: 48px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: rgba(0, 0, 0, 0.84);
+  font-weight: 400;
+}
+
+.container-main {
+  margin: 0 auto;
+  max-width: 680px;
+  width: 100%;
+}
+
+.avtar > img {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  float: left;
+}
+
+.date {
+  float: right;
+  margin-top: 10px;
+}
+
+.avtar-text {
+  margin-top: 10px;
+  float: left;
+  padding-left: 25px;
+}
+
+.author-name {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.avtar > p {
+  margin-left: 12px;
+  color: rgba(0, 0, 0, 0.84);
+}
+
+figcaption {
+  /* text-align: center; */
+  padding-top: 15px;
+}
+
+.desc {
+  margin-top: 2em;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.heart {
+  position: absolute;
+  left: -35px;
+  top: -60px;
+  width: 100px;
+  height: 68px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+    no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  -webkit-transition: background-position 1s steps(28);
+  transition: background-position 1s steps(28);
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+.heart.is-active {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+.stage {
+  position: relative;
+  /*  position: absolute;
+    top: 50%;
+    left: -20%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+}
+
+.heart span {
+  padding-left: 80px;
+  position: absolute;
+  /* padding: 46px; */
+  padding-top: 41px;
+  white-space: nowrap;
+}
+
+.avtar + div {
+  margin-top: 120px;
+}
+
+.post-img {
+  margin-top: 30px;
+}
+
+img.img-responsive.post-img {
+  width: 400px;
+}
+@media screen and (max-width: 767px) {
+  .post-exist + .container-postdetil {
+    float: none;
+  }
+  .avtar .date {
+    margin: 0;
+    float: left;
+    margin-left: 15px;
+    margin-top: 8px;
+  }
+  .avtar-text {
+    margin-top: 0;
+    padding-left: 15px;
+  }
+  .post-img {
+    margin-top: 115px;
+  }
+  .heart {
+    top: -37px;
+  }
+  :host::ng-deep section h2:nth-child(6) {
+    font-size: 16px;
+  }
+  :host::ng-deep section a {
+    word-break: break-word;
+    font-size: 16px;
+  }
+  :host::ng-deep section p {
+    font-size: 14px;
+  }
+}
+
+:host::ng-deep section img,
+:host::ng-deep p.desc img {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: table;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.heart span {
+  color: #0d6fc3;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.author-name:hover {
+  cursor: pointer;
+}
+
+div#myModal {
+  top: 20%;
+}
+
+.commentsection {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.commentsection h4 {
+  display: inline;
+  color: #000;
+  font-weight: 600;
+}
+
+.commentsection .date {
+  float: right;
+}
+
+.data {
+  padding-top: 15px;
+}
+
+.commentsection hr {
+  display: none;
+}
+
+.commentsection div {
+  padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.row.submit-button-container {
+  padding-bottom: 25px;
+}
+
+.avtar + img {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.category,
+.category {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.category span {
+  padding-left: 10px;
+}
+
+.avtar + div img {
+  margin-left: auto;
+  margin-right: auto;
+}
