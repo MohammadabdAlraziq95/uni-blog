@@ -1,21 +1,33 @@
 .text-info {
-    padding-top: 35px;
+  padding-top: 35px;
 }
 
 .redirect:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .redirect {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .btnPrimary {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
-@media screen and (max-width:767px) {
-    .part2 p {
-        text-align: left;
-    }
+@media screen and (max-width: 767px) {
+  .part2 p {
+    text-align: left;
+  }
+}
+.content {
+  /* display: flex; */
+  /* margin: 82px auto 32px; */
+  padding: 0 16px;
+  margin-top: 100px;
+  /* max-width: 960px; */
+  /* flex-direction: row; */
+  align-items: center;
+  height: 700px;
+  /* background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+      background-size: fill; */
 }

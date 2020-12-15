@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top margin-border-top">
+    <a class="navbar-brand" routerLink="about"> <i class="far fa-calendar-alt"></i> Event Reminder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink=""><i class="fas fa-clipboard-list"></i> My Events <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="addtodo"><i class="fas fa-plus"></i> Add</a>
+        </li>
+
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-info-circle"></i> About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="about"><i class="fas fa-info-circle"></i> About</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="todosetting"><i class="fas fa-sliders-h"></i> Settings</a>
+          </div>
+        </li> 
+
+<!--
+        <li class="nav-item">
+          <a class="nav-link" routerLink="todosetting"> <i class="fas fa-info-circle"></i> Settings</a>
+        </li>
+-->
+      </ul>
+
+        <button type="button" class="btn btn-secondary" routerLink="addtodo" placement="left" ngbTooltip="Click to add new item">
+          Events <span class="badge badge-light">{{ countItems }} </span>
+      </button>
+      &nbsp;&nbsp;
+      <h4><span class="badge badge-dark border border-success"><i class="fab fa-github"></i> <a href="https://github.com/libyapages/Event-Reminder---Angular-6" target="_blank" style="color:white"> Github</a></span></h4> 
+
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+
+
+
+  <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0">
+              <input [disabled]="currentUrl != '/' || countItems == 0" class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search" (keyup)="ShearDataKeyPress($event)">
+              <!-- <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button> -->
+          </form>
+          &nbsp;&nbsp;
+<!--        <span class="badge badge-secondary left" placement="top" ngbTooltip="Show events code"> A </span> &nbsp;&nbsp;&nbsp; -->
+           
+        <ul class="navbar-nav mr-auto" >
+         <li class="nav-item dropup">
+            <button [disabled]="currentUrl != '/' || countItems == 0" class="btn btn-outline-success dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Show Events
+            </button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="" (click)="ShearDataClick('Happening Now')">Happening Now</a>
+                <a class="dropdown-item" routerLink="" (click)="ShearDataClick('Up Coming')">Up Coming</a>
+                <a class="dropdown-item" routerLink="" (click)="ShearDataClick('Completed')">Completed</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="" (click)="ShearDataClick('All')">All Events</a>
+              </div>
+          </li> 
+        </ul>
+       
+
+
+        <button [disabled]="currentUrl != '/' || countItems == 0" class="btn btn-outline-danger my-2 my-sm-0" (click)="delalltodoitemsConfirmed(content)" placement="left" ngbTooltip="Delete all item">Delete All ({{ countItems }})</button>
+
+      </div>
+  </nav>
+
+
+
+
+  <!-- Modal to confirm deletion-->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Event Reminder</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        Do you want to delete ALL item(s).
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('confirmed')">YES, Delete All</button>
+        <button type="button" class="btn btn-success" (click)="c('cancel')">Cancel</button>
+      </div>
+  </ng-template>
+  

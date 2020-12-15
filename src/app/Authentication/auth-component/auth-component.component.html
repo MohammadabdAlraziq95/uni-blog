@@ -1,11 +1,15 @@
 <div class="content" role="main">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
+  <div class="row" >
+    <div class="col-4"></div>
+    <div class="col-4"style="margin-top: 100px;">
       <div class="alert alert-danger" *ngIf="error">
         <p>{{ error }}</p>
       </div>
       <div *ngIf="isLoading" style="text-align: center" class="loading-text">
         <app-loading-spinner></app-loading-spinner>
+      </div>
+      <div class="top-title">
+        <h2 style="color: rgb(51, 47, 39)">AUTHENTICATION</h2>
       </div>
       <form
         #authForm="ngForm"
@@ -40,17 +44,21 @@
 
         <div class="form-group">
           <button
-            class="btn btn-primary"
+          class="btn btn-dark btn-lg btn-block"
             type="submit"
             [disabled]="!authForm.valid"
+            style="background-color: #34322d; color: white; margin-bottom: 50px"
+
           >
             {{ isLoginMode ? "Login" : "Sign Up" }}
           </button>
-          |
+          
           <button
-            class="btn btn-primary"
+          class="btn btn-dark btn-lg btn-block"
             (click)="onSwitchMode()"
             type="button"
+            style="background-color: #34322d; color: white; margin-bottom: 50px"
+
           >
             Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
           </button>
@@ -72,5 +80,8 @@
         </div>
       </form>
     </div>
+    <div class="col-4"></div>
+
+
   </div>
 </div>

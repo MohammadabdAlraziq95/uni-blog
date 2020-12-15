@@ -1,0 +1,89 @@
+<div class="content" role="main">
+    <div class="row" >
+      <div class="col-4"></div>
+      <div class="col-4"style="margin-top: 100px;">
+        <div class="alert alert-danger" *ngIf="error">
+          <p>{{ error }}</p>
+        </div>
+        <div *ngIf="isLoading" style="text-align: center" class="loading-text">
+          <app-loading-spinner></app-loading-spinner>
+        </div>
+        <div class="top-title">
+          <h2 style="color: rgb(51, 47, 39)">Add New Event</h2>
+        </div>
+        <form
+          #authForm="ngForm"
+          (ngSubmit)="onSubmit(authForm)"
+          *ngIf="!isLoading"
+        >
+          <div class="form-group">
+            <label for="email">Event Title</label>
+  
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              ngModel
+              name="email"
+              required
+              email
+            />
+          </div>
+
+<!-- 
+
+          <label for="email">Event Title</label>
+          <input [(ngModel)]="selectedDate" [dpDayPicker]="datePickerConfig" />  
+           -->
+       
+           <p>Event Date </p>
+
+           <ngb-datepicker [displayMonths]="displayMonths" [navigation]="navigation"
+           [showWeekNumbers]="showWeekNumbers" [outsideDays]="outsideDays">
+</ngb-datepicker>
+
+          <div class="form-group">
+            <label for="password" style="margin-top: 10px;">Descreption</label>
+            <textarea matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="1"
+            id="descreption"
+            class="form-control"
+            cdkAutosizeMaxRows="5"></textarea>
+           
+          </div>
+
+          
+  
+          <div class="form-group">
+            <button
+            class="btn btn-dark btn-lg btn-block"
+              type="submit"
+              style="background-color: #34322d; color: white; margin-bottom: 50px"
+  
+            >
+            Add new event
+            </button>
+            
+           
+          
+          </div>
+  
+          <div class="form-group">
+            <!-- <button
+              type="button"
+              class="btn btn-block"
+              (click)="tryGoogleLogin()"
+            >
+              <i class="fa fa-google" aria-hidden="true"></i>
+              Login with Google
+            </button> -->
+          </div>
+        </form>
+      </div>
+      <div class="col-4"></div>
+  
+  
+    </div>
+  </div>
+  

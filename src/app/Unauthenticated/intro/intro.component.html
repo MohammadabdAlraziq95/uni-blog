@@ -1,0 +1,207 @@
+<div class="content">
+  <!-- Highlight Card -->
+  <div class="container-top">
+    <div class="top-title">
+      <h1 style="color: #222222">University Book</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm col-md">
+          <div id="card">
+            <div class="card">
+              <div
+                style="
+                  background: url('https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');
+                  background-size: cover;
+                "
+                class="card-image"
+              ></div>
+              <div class="card-title">
+                <h2>Q/A</h2>
+              </div>
+              <div class="card-detail">
+                <!-- <h3>in | <span class="date">Eletronics</span></h3> -->
+              </div>
+              <div class="card-text">
+                <p>
+                  Q & A is a situation in which a person or group of people asks
+                  questions and another person or group of people answers them.
+                </p>
+              </div>
+
+              <div class="card-product-price">
+                <button (click)="goToFaq()" type="button">lets go</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-md">
+          <div id="card">
+            <div class="card">
+              <div
+                class="card-image"
+                style="
+                  background: url('https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-title">
+                <h2>Colleges</h2>
+              </div>
+              <div class="card-detail">
+                <!-- <h3>in | <span class="date">Eletronics</span></h3> -->
+              </div>
+              <div class="card-text">
+                <p>
+                  You can explore the colleges for the university and check
+                  plans and other documents .
+                </p>
+              </div>
+
+              <div class="card-product-price">
+                <button (click)="goToColleges()" type="button">lets go</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-md">
+          <div id="card">
+            <div class="card">
+              <div
+                class="card-image"
+                style="
+                  background: url('https://images.unsplash.com/photo-1521575363954-393ae1439d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80');
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-title">
+                <h2>MAP</h2>
+              </div>
+              <div class="card-detail">
+                <!-- <h3>in | <span class="date">Eletronics</span></h3> -->
+              </div>
+              <div class="card-text">
+                <p>
+                  Helping you to follow the your class as new student or visitor
+                  .
+                </p>
+              </div>
+
+              <div class="card-product-price">
+                <button type="button">lets go</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-md">
+          <div id="card">
+            <div class="card">
+              <div
+                class="card-image"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80');
+                  background-size: cover;
+                "
+              ></div>
+              <div class="card-title">
+                <h2>Events</h2>
+              </div>
+              <div class="card-detail">
+                <!-- <h3>in | <span class="date">Eletronics</span></h3> -->
+              </div>
+              <div class="card-text">
+                <p>
+                  Track university events so you can have fun and follow your
+                  best instrested things inside university.
+                </p>
+              </div>
+
+              <div class="card-product-price">
+                <button (click)="goToEvents()" type="button">lets go</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Resources -->
+
+  <div class="row ">
+    <div class="col-md-12">
+   
+      <div *ngIf="sorted | filter: searchText as result">
+        <h3 class="Featured hidden-md hidden-lg" style="padding-left:20px">Latest Questions</h3>
+        <div *ngIf="!isFetching && result?.length > 0">
+          <div
+            class="card row"
+            *ngFor="let i of result; let c = index"
+            style="height: 100px"
+          >
+            <a [routerLink]="[c]">
+              <div class="row">
+                <div class="col-4">
+                  <img
+                    src="{{ i.imgurl }} "
+                    alt="Avatar "
+                    style="width: 100%"
+                    class="img-responsive"
+                    alt="img"
+                  />
+                </div>
+                <div class="col-md-8 col-xs-12 main-content col-md-pull-4">
+                  <h2 class="title">
+                    {{ i.title }}
+                  </h2>
+
+                  <p class="desc desc1" [innerHTML]="i.desc "></p>
+                </div>
+                <div class="author-date col-md-6 col-xs-12">
+                  <p class="author-name" style="padding-left: 10px">
+                    <!-- By : {{ i.name }} -->
+                  </p>
+                  <p
+                    class="date"
+                    style="padding-left: 10px; background-color: #fff"
+                  >
+                    {{ i.name }} On : {{ i.created_date  }}
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!--  <div class="col-md-4 col-xs-5 img-col">
+                            <img src="{{i.imgurl}}" alt="Avatar" style="width:100%" class="img-responsive" alt="">
+                        </div -->
+          </div>
+        </div>
+        <div class="loading-text text-left no-result">
+          <h4 *ngIf="result.length === 0">No Results Found</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- <ng-template #loading>
+        <div *ngIf="isFetching && !error" class="loading-text">
+            <div class="loader"></div>
+            <p> loading Contet...</p>
+        </div>
+
+
+
+        <div *ngIf="error && !isFetching" class="error-text">
+            <h4>{{error}}</h4>
+
+        </div>
+    </ng-template>
+    <div class="col-sm-4 col-xs-12">
+    </div> -->
+
+    <div *ngIf="isFetching && !error" class="loading-text">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+
+    <div *ngIf="error && !isFetching" class="error-text">
+      <h4>{{ error }}</h4>
+    </div>
+  </div>
+</div>

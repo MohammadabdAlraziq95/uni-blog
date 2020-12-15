@@ -15,7 +15,7 @@
           routerLinkActive="active"
           [routerLink]="['/myprofile', unameParam, 'publicposts']"
           [routerLinkActiveOptions]="{ exact: true }"
-          >Public Posts <span class="count-post"> ({{ pbcount }})</span></a
+          >Public Questions <span class="count-post"> ({{ pbcount }})</span></a
         >
 
         <a
@@ -23,14 +23,14 @@
           routerLinkActive="active"
           [routerLink]="['']"
           [routerLinkActiveOptions]="{ exact: true }"
-          >Private Posts <span class="count-post"> ({{ prcount }})</span></a
+          >Private Questions <span class="count-post"> ({{ prcount }})</span></a
         >
         <a
           class="list-group-item disabled"
           routerLinkActive="active"
           [routerLink]="['']"
           [routerLinkActiveOptions]="{ exact: true }"
-          >All Posts <span class="count-post"> ({{ allcount }})</span></a
+          >All Questions <span class="count-post"> ({{ allcount }})</span></a
         >
       </div>
     </div>

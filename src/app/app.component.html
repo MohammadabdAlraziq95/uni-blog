@@ -1,138 +1,79 @@
-<!-- <nav class="navbar navbar-default main-header">
-  <div class="container header-main">
-    <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand">University Book</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="myHeader">
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"></li>
-        <li routerLinkActive="active"></li>
-        <li
-          routerLinkActive="active"
-          *ngIf="!isAuthenticated || isAuthenticated"
-        >
-          <a routerLink="/home">Home</a>
-        </li>
-        <li routerLinkActive="active">
-          <a *ngIf="allpostcount == 0" routerLink="/create-post">Create post</a>
-          <a *ngIf="allpostcount > 0" routerLink="/create-post">Add Question</a>
-        </li>
-
-        <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a routerLink="/auth">Authenticate</a>
-        </li>
-        <li
-          routerLinkActive="active"
-          *ngIf="!isAuthenticated || isAuthenticated"
-        >
-          <a routerLink="/colleges">Colleges</a>
-        </li>
-
-        <li
-          routerLinkActive="active"
-          *ngIf="!isAuthenticated || isAuthenticated"
-        >
-          <a routerLink="/faq">FAQ</a>
-        </li>
-        <li routerLinkActive="active" *ngIf="isAuthenticated && isemailverfied">
-          <a routerLink="/myposts">MyPosts</a>
-        </li>
-        <li routerLinkActive="active" *ngIf="isAuthenticated && !isprofileSet">
-          <a routerLink="/myprofile">CreateProfile</a>
-        </li>
-
-        <li
-          routerLinkActive="active"
-          *ngIf="isAuthenticated && isprofileSet && isemailverfied"
-        >
-          <a [routerLink]="['/myprofile', username]">MyProfile</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="isAuthenticated">
-          <a style="cursor: pointer" (click)="onLogout()">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
-
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="60"
-    src="https://i.pinimg.com/originals/67/4d/12/674d121224b3e10fe78eda2ffb152b3a.png"
-  />
+<div>
+  <div class="toolbar" role="banner">
+    <img
+      width="60"
+      src="https://i.pinimg.com/originals/67/4d/12/674d121224b3e10fe78eda2ffb152b3a.png"
+    />
 
-  <!-- <a href="" style="color: wheat; margin-right: 30px">{{ }}</a> -->
+    <!-- <a href="" style="color: wheat; margin-right: 30px">{{ }}</a> -->
 
-  <nav id="primary_nav_wrap">
-    <ul>
-      <li>
-        <!-- <a style="color: rgb(255, 145, 0)" href="#">{{ this. }}</a> -->
-        <ul>
-          <li>
-            <!-- <a class="item"><fa name="cog" animation="spin"></fa> -->
-            <!-- </i>Edit Profile</a> -->
-            <!-- 
+    <nav id="primary_nav_wrap">
+      <ul>
+        <li>
+          <!-- <a style="color: rgb(255, 145, 0)" href="#">{{ this. }}</a> -->
+          <ul>
+            <li>
+              <!-- <a class="item"><fa name="cog" animation="spin"></fa> -->
+              <!-- </i>Edit Profile</a> -->
+              <!-- 
             <a href="#">{{ this.user.college }}</a>
             <a href="#">{{ this.user.collegeNumber }}</a> -->
-          </li>
-          <li>
-            <a href="#">
-              <div>
-                <span style="color: #333" class="material-icons">
-                  favorite_border
-                </span>
-                Favorite
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div>
-                <span style="color: #333; padding: 10" class="material-icons">
-                  close
-                </span>
-                Logout
-              </div>
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span style="color: #333" class="material-icons">
+                    favorite_border
+                  </span>
+                  Favorite
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div>
+                  <span style="color: #333; padding: 10" class="material-icons">
+                    close
+                  </span>
+                  Logout
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"></li>
+      <li routerLinkActive="active"></li>
+
+      <li routerLinkActive="active" *ngIf="!isAuthenticated">
+        <a style="color: aliceblue; margin-right: 30px" routerLink="/auth"
+          >AUTHANTICATE</a
+        >
       </li>
     </ul>
-  </nav>
 
-  <ul class="nav navbar-nav">
-    <li routerLinkActive="active"></li>
-    <li routerLinkActive="active"></li>
-
-    <li routerLinkActive="active" *ngIf="!isAuthenticated">
-      <a style="color: aliceblue; margin-right: 30px" routerLink="/auth"
-        >AUTHANTICATE</a
-      >
-    </li>
-  </ul>
-
-  <a
-    href=""
-    routerLinkActive="active"
-    routerLink="/home"
-    style="color: aliceblue; margin-right: 30px"
-    routerLinkActive="active"
-    *ngIf="!isAuthenticated || isAuthenticated"
-    >HOME</a
-  >
-  <a
+    <a
+      href=""
+      routerLinkActive="active"
+      routerLink="/intro"
+      style="color: aliceblue; margin-right: 30px"
+      routerLinkActive="active"
+      *ngIf="!isAuthenticated || isAuthenticated"
+      >HOME</a
+    >
+    <!-- <a
     href=""
     routerLink="/home"
     routerLinkActive="active"
     *ngIf="!isAuthenticated || isAuthenticated"
     style="color: aliceblue; margin-right: 30px"
     >FAQ</a
-  >
-  <a
+  > -->
+    <!-- <a
     href=""
     routerLinkActive="active"
     routerLink="/colleges"
@@ -140,94 +81,97 @@
     routerLinkActive="active"
     *ngIf="!isAuthenticated || isAuthenticated"
     >COLLEGES</a
-  >
-  <span routerLinkActive="active">
-    <a
+  > -->
+    <span routerLinkActive="active">
+      <!-- <a
       style="color: aliceblue; margin-right: 30px"
       *ngIf="allpostcount == 0"
       routerLink="/create-post"
       >CREATE PROFILE</a
-    >
-    <a
-      *ngIf="allpostcount > 0"
+    > -->
+      <!-- <a
+      *ngIf="isAuthenticated"
       style="color: aliceblue; margin-right: 30px"
       routerLink="/create-post"
-      >Add Question</a
-    >
-  </span>
+      >ADD QUESTION</a
+    > -->
+    </span>
 
-  <span routerLinkActive="active" *ngIf="isAuthenticated && isemailverfied">
+    <!-- <span routerLinkActive="active" *ngIf="isAuthenticated && isemailverfied">
     <a routerLink="/myposts" style="color: aliceblue; margin-right: 30px"
-      >MyPosts</a
+      >MY QUESTIONS</a
     >
-  </span>
-  <span routerLinkActive="active" *ngIf="isAuthenticated && !isprofileSet">
+  </span> -->
+    <!-- <span routerLinkActive="active" *ngIf="isAuthenticated && !isprofileSet">
     <a style="color: aliceblue; margin-right: 30px" routerLink="/myprofile"
       >CreateProfile</a
     >
-  </span>
-  <span
-    routerLinkActive="active"
-    *ngIf="isAuthenticated && isprofileSet && isemailverfied"
-  >
-    <a
-      style="color: aliceblue; margin-right: 30px"
-      [routerLink]="['/myprofile', username]"
-      >MyProfile</a
+  </span> -->
+    <span
+      routerLinkActive="active"
+      *ngIf="isAuthenticated && isprofileSet && isemailverfied"
     >
-  </span>
-  <a href="" style="color: aliceblue; margin-right: 30px">ABOUT </a>
-  <a
-    href=""
-    routerLink="/profile"
-    style="color: aliceblue; margin-right: 30px"
-    *ngIf="isLoged"
-    >PROFILE
-  </a>
+      <a
+        style="color: aliceblue; margin-right: 30px"
+        [routerLink]="['/myprofile', username]"
+        >MY PROFILE</a
+      >
+    </span>
+    <a href="" style="color: aliceblue; margin-right: 30px">ABOUT </a>
+    <a
+      href=""
+      routerLink="/profile"
+      style="color: aliceblue; margin-right: 30px"
+      *ngIf="isLoged"
+      >PROFILE
+    </a>
 
-  <!-- <a
+    <!-- <a
     style="color: aliceblue; margin-right: 30px; cursor: pointer"
     routerLink="/login"
     *ngIf="!isLoged"
     >LOGIN</a
   > -->
-  <a *ngIf="isAuthenticated" style="cursor: pointer" (click)="onLogout()"
-    >Logout</a
-  >
-  <!-- (click)="goto()" -->
-
-  <div class="spacer"></div>
-  <a
-    aria-label="Angular on twitter"
-    target="_blank"
-    rel="noopener"
-    href="https://twitter.com/angular"
-    title="Twitter"
-  >
-    <button
-      style="
-        position: absolute;
-        right: 10px;
-        margin: 10px;
-        background-color: #34322d;
-      "
-      *ngIf="isLoged"
-      (click)="onLogout()"
+    <a *ngIf="isAuthenticated" style="cursor: pointer" (click)="onLogout()"
+      >LOGOUT</a
     >
-      <p style="color: white; font-size: 17px">Logout</p>
-    </button>
-  </a>
-</div>
+    <!-- (click)="goto()" -->
 
-<div class="container middle">
-  <!-- <ngx-spinner bdColor="rgb(221,214,243,0.5)" size="medium" type="ball-spin-fade" color="#42275a" fullScreen=" true">
+    <div class="spacer"></div>
+    <a
+      aria-label="Angular on twitter"
+      target="_blank"
+      rel="noopener"
+      href="https://twitter.com/angular"
+      title="Twitter"
+    >
+      <button
+        style="
+          position: absolute;
+          right: 10px;
+          margin: 10px;
+          background-color: #34322d;
+        "
+        *ngIf="isLoged"
+        (click)="onLogout()"
+      >
+        <p style="color: white; font-size: 17px">Logout</p>
+      </button>
+    </a>
+  </div>
+
+  <div class=" middle">
+    <!-- <ngx-spinner bdColor="rgb(221,214,243,0.5)" size="medium" type="ball-spin-fade" color="#42275a" fullScreen=" true">
       <p style="color: Black;font-size: 20px; font-weight: 600;">Loading News... </p>
   </ngx-spinner> -->
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="footer">
+    <div class="container" *ngIf="!isloading"></div>
+
+    <h5 *ngIf="!isloading" class="text-center copyright">
+      © Copyrights reserved by University Book
+    </h5>
+  </div>
 </div>
-
-<div class="container" *ngIf="!isloading"></div>
-
-<h5 *ngIf="!isloading" class="text-center copyright">
-  © Copyrights reserved by University Book
-</h5>

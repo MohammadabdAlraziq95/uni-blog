@@ -4,6 +4,7 @@ import { CrudService } from "../shared/crud.service";
 import { catchError } from "rxjs/operators";
 import { ACrudService } from "../../Authentication/shared/acrud.service";
 import { ToastrService } from "ngx-toastr";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private cd: CrudService,
     private acrud: ACrudService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -80,5 +82,8 @@ export class HomeComponent implements OnInit {
     catchError((error) => {
       throw new Error("Error: Getting document:" + error); // throw an Error
     });
+  }
+  addNewQuestion() {
+    this.router.navigateByUrl("/create-post");
   }
 }

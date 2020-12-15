@@ -19,7 +19,30 @@ export class ProfileComponent implements OnInit {
   uploadPercent: Observable<number>;
 
   ProfileForm: FormGroup;
+  gender: string = "male";
 
+  questionList = [
+    {
+      question: {
+        id: "Q1",
+        query: "Gender:",
+      },
+      options: [
+        {
+          id: "Male",
+          text: "Male",
+        },
+        {
+          id: "Female",
+          text: "Female",
+        },
+      ],
+      selected: {
+        id: "",
+        text: "",
+      },
+    },
+  ];
   validation_messages = {
     uname: [{ type: "required", message: "Title is required." }],
 

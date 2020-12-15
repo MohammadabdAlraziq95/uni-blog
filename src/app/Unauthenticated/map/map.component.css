@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #bfc4c5;
+  border-right: none;
+  padding: 5px;
+  /* height: 20px; */
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #3c4344;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #a2aeaf;
+  background: #a6acad;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+}
+.content {
+    /* display: flex; */
+    /* margin: 82px auto 32px; */
+    padding: 0 16px;
+    /* max-width: 960px; */
+    /* flex-direction: row; */
+    align-items: center;
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=983&q=80");
+  }
+  .top-title {
+    grid-area: title;
+    margin: 10px 10px 10px 10px;
+    margin-top: 66px;
+    padding-top: 40px;
+    color: rgb(194, 125, 125);
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.5em;
+    font: bold;
+  }

@@ -7,7 +7,7 @@
           [ngClass]="{ active: isAll == true }"
           [routerLink]="['/myposts', type[0]]"
           (click)="getAllPosts()"
-          >All Posts
+          >All Questions
         </a>
 
         <a
@@ -15,7 +15,7 @@
           [ngClass]="{ active: isPublic == true }"
           [routerLink]="['/myposts', type[1]]"
           (click)="getPublicPosts()"
-          >Public Posts</a
+          >Public Questions</a
         >
 
         <a
@@ -23,7 +23,7 @@
           [ngClass]="{ active: isPrivate == true }"
           [routerLink]="['/myposts', type[2]]"
           (click)="getPriavtePosts()"
-          >Private Posts</a
+          >Private Questions</a
         >
       </div>
     </div>

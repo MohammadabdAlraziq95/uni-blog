@@ -14,12 +14,18 @@ import { ResetpasswordComponent } from "./Authentication/resetpassword/resetpass
 import { VerifyMailComponent } from "./Authentication/verify-mail/verify-mail.component";
 import { CollegesComponent } from "./Unauthenticated/colleges/colleges.component";
 import { FAQComponent } from "./Unauthenticated/faq/faq.component";
+import { IntroComponent } from "./Unauthenticated/intro/intro.component";
+import { EventsComponent } from './Unauthenticated/events/events.component';
+import { AddEvenytsComponent } from './Unauthenticated/events/add-evenyts/add-evenyts.component';
 
 const routes: Routes = [
-  // { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "", redirectTo: "/intro", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   // { path: "home", component: HomeComponent },
   { path: "home/:id", component: UPostDetailComponent },
+  { path: "intro", component: IntroComponent },
+  { path: "events", component: EventsComponent },
+  { path: "add-event", component: AddEvenytsComponent },
 
   { path: "faq/:id", component: UPostDetailComponent, pathMatch: "full" },
   { path: "featured/:id", component: UPostDetailComponent, pathMatch: "full" },
@@ -64,7 +70,7 @@ const routes: Routes = [
   { path: "myposts/:type/:id/edit", component: UserEditComponent },
   { path: "myposts/:type/:id/delete", component: UPostDetailComponent },
 
-  // { path: "**/undefined", redirectTo: "/home" },
+  { path: "**/undefined", redirectTo: "/inro" },
 ];
 
 @NgModule({

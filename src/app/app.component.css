@@ -5,11 +5,11 @@
   font-size: 22px;
 }
 
-footer {
+/* footer {
   justify-content: center;
   margin: 5rem auto;
   text-align: center;
-}
+} */
 
 .github {
   width: 30%;
@@ -240,15 +240,12 @@ p {
   background-color: #34322d;
   color: white;
   font-weight: 600;
+  width: 100%;
 }
 .footer {
-  /* position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 70px;
-        display: flex;
-        align-items: center; */
+  position: relative;
+
+  align-items: center;
   background-color: #34322d;
   color: white;
   font-weight: 600;

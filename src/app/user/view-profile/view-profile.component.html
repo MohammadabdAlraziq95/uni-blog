@@ -13,16 +13,19 @@
           [routerLink]="['/myprofile', username, 'editProfile']"
           >Edit Profile</a
         >
+        <a class="list-group-item" [routerLink]="['/myposts/allpost']"
+          >My Questions</a
+        >
 
         <a class="list-group-item" [routerLink]="['/myposts', 'public']"
-          >Public Posts <span class="count-post"> ({{ pbcount }})</span></a
+          >Public Questions <span class="count-post"> ({{ pbcount }})</span></a
         >
 
         <a class="list-group-item" [routerLink]="['/myposts', 'private']"
-          >Private Posts <span class="count-post"> ({{ prcount }})</span></a
+          >Private Questions <span class="count-post"> ({{ prcount }})</span></a
         >
         <a class="list-group-item" [routerLink]="['/myposts']"
-          >All Posts <span class="count-post"> ({{ allcount }})</span></a
+          >All Questions <span class="count-post"> ({{ allcount }})</span></a
         >
       </div>
     </div>
@@ -40,16 +43,16 @@
           class="list-group-item"
           routerLinkActive="active"
           [routerLink]="['publicposts']"
-          >Public Posts
+          >Public Questions
           <span class="count-post"> ({{ pbcount }})</span>
         </a>
 
         <a class="list-group-item disabled" [routerLink]="['']"
-          >Private Posts <span class="count-post"> ({{ prcount }})</span></a
+          >Private Questions <span class="count-post"> ({{ prcount }})</span></a
         >
 
         <a class="list-group-item disabled" [routerLink]="['']"
-          >All Posts <span class="count-post"> ({{ allcount }})</span></a
+          >All Questions <span class="count-post"> ({{ allcount }})</span></a
         >
       </div>
     </div>
@@ -73,6 +76,8 @@
           <p><b>Email : </b> {{ ProfileData.email }}</p>
 
           <p><b>Bio : </b> {{ ProfileData.desc }}</p>
+          <p><b>Type : </b> Student</p>
+
         </div>
       </div>
     </div>

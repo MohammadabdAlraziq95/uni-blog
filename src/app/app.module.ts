@@ -39,7 +39,13 @@ import { VerifyMailComponent } from "./Authentication/verify-mail/verify-mail.co
 import { NoSanitizePipe } from "./Authentication/shared/no-sanitize.pipe";
 import { CollegesComponent } from "./Unauthenticated/colleges/colleges.component";
 import { FAQComponent } from './Unauthenticated/faq/faq.component';
-
+import { IntroComponent } from './Unauthenticated/intro/intro.component';
+import { EventsComponent } from './Unauthenticated/events/events.component';
+import { AddEvenytsComponent } from './Unauthenticated/events/add-evenyts/add-evenyts.component';
+import { IgxDatePickerModule } from 'igniteui-angular';
+import { HammerModule } from "@angular/platform-browser";
+import { NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,8 +64,13 @@ import { FAQComponent } from './Unauthenticated/faq/faq.component';
     NoSanitizePipe,
     CollegesComponent,
     FAQComponent,
+    IntroComponent,
+    // EventsPipe,
+    EventsComponent,
+    AddEvenytsComponent,
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -72,6 +83,7 @@ import { FAQComponent } from './Unauthenticated/faq/faq.component';
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     Ng2SearchPipeModule,
     ToastrModule.forRoot(),
+     HammerModule, IgxDatePickerModule 
   ],
   providers: [CrudService, AuthService, ACrudService, AuthGuard],
   bootstrap: [AppComponent],
